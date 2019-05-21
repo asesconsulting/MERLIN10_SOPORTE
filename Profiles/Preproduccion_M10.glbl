@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalVariableEntities>
+   <description></description>
+   <name>Preproduccion_M10</name>
+   <tag></tag>
+   <defaultProfile>false</defaultProfile>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'http://api.preprod.merlindataquality.com/2.0/addressnormalizer?wsdl'</initValue>
+      <name>Address_ARG2</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'http://api.preprod.merlindataquality.com/2.0/identityvalidation?wsdl'</initValue>
+      <name>Filiator_ARG2</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'http://api.preprod.merlindataquality.com/2.0/namenormalizer?wsdl'</initValue>
+      <name>Name_ARG2</name>
+   </GlobalVariableEntity>
+</GlobalVariableEntities>
