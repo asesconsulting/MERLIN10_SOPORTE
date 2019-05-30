@@ -19,4 +19,14 @@
       <initValue>'https://sws.merlindataquality.com/2.0/namenormalizer?wsdl'</initValue>
       <name>Name_ARG2</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'https://sws.merlindataquality.com/2.0/phonenormalizer?wsdl'</initValue>
+      <name>Phone_ARG2</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'http://api.merlindataquality.com/2.0/taxdatavalidation?wsdl'</initValue>
+      <name>Tributario_ARG2</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>
