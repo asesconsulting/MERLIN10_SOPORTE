@@ -29,4 +29,14 @@
       <initValue>'http://api.preprod.merlindataquality.com/2.0/taxdatavalidation?wsdl'</initValue>
       <name>Tributario_ARG2</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'http://api.preprod.merlindataquality.com/2.0/vehiclevalidation?wsdl'</initValue>
+      <name>Patentes_ARG2</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'http://api.preprod.merlindataquality.com/2.0/enrichment?wsdl'</initValue>
+      <name>Enrichment_ARG2</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

@@ -13,23 +13,85 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-salida = WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Address_ARGM10/Address_CO_SM'))
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Address_ARG_SOAP_2/Address _CO_AV. COSTANERA - PALERMO'))
 
-salida = WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Address_ARGM10/Address_DU_DA'))
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Address_ARG_SOAP_2/Address _CO_Localidad_General_LaMadrid'))
 
-salida = WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Address_ARGM10/Address_DU_DC'))
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Address_ARG_SOAP_2/Address_CO_AGEA'))
 
-salida = WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Address_ARGM10/Address_DU_DS'))
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Address_ARG_SOAP_2/Address_CO_BARRIO_CERRADO'))
 
-salida = WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Address_ARGM10/Address_DU_DZ'))
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Address_ARG_SOAP_2/Address_CO_CalleAbreviada_TarjetaNaranja'))
 
-salida = WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Address_ARGM10/Address_NE_AI'))
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Address_ARG_SOAP_2/Address_CO_CPA_Puerta_NR'))
 
-salida = WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Address_ARGM10/Address_NE_CI'))
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Address_ARG_SOAP_2/Address_CO_DTV_Abreviatura_Santiago'))
 
-salida = WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Address_ARGM10/Address_NE_LI'))
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Address_ARG_SOAP_2/Address_CO_DTV_Barrio'))
 
-salida = WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Address_ARGM10/Address_NE_SD'))
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Address_ARG_SOAP_2/Address_CO_DTV_Roma'))
 
-salida = WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Address_ARGM10/Address_NP_SM'))
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Address_ARG_SOAP_2/Address_CO_Entre_Calles_30'))
+
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Address_ARG_SOAP_2/Address_CO_Estandar'))
+
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Address_ARG_SOAP_2/Address_CO_HSBC'))
+
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Address_ARG_SOAP_2/Address_CO_ITAU_Abreviatura'))
+
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Address_ARG_SOAP_2/Address_CO_ITAU_Tomas_Espora'))
+
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Address_ARG_SOAP_2/Address_CO_KM_Rutas'))
+
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Address_ARG_SOAP_2/Address_CO_Macro_Arias'))
+
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Address_ARG_SOAP_2/Address_CO_MAQ_Telefonica'))
+
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Address_ARG_SOAP_2/Address_CO_Santander_Abreviatura1'))
+
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Address_ARG_SOAP_2/Address_CO_Santander_Abreviatura2'))
+
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Address_ARG_SOAP_2/Address_CO_Sin_Altura_Tipogeo5'))
+
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Address_ARG_SOAP_2/Address_CO_TarjetaNaranja'))
+
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Address_ARG_SOAP_2/Address_CO_TN_Zona_Riesgo'))
+
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Address_ARG_SOAP_2/Address_DU_DA'))
+
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Address_ARG_SOAP_2/Address_DU_DA_Ruta'))
+
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Address_ARG_SOAP_2/Address_DU_DC'))
+
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Address_ARG_SOAP_2/Address_DU_DE'))
+
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Address_ARG_SOAP_2/Address_DU_DE_San_Martin'))
+
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Address_ARG_SOAP_2/Address_DU_DZ'))
+
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Address_ARG_SOAP_2/Address_NE_AI'))
+
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Address_ARG_SOAP_2/Address_NE_AI_ACCESO_PADRELUIS'))
+
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Address_ARG_SOAP_2/Address_NE_AI_DTV_Abreviatura'))
+
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Address_ARG_SOAP_2/Address_NE_AI_DTV_Alpatacal'))
+
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Address_ARG_SOAP_2/Address_NE_AI_DTV_Colon'))
+
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Address_ARG_SOAP_2/Address_NE_AI_DTV_cp'))
+
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Address_ARG_SOAP_2/Address_NE_AI_SolucionErroneaBarrio'))
+
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Address_ARG_SOAP_2/Address_NE_CI_cp'))
+
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Address_ARG_SOAP_2/Address_NE_CI_DTV_Cuartel_V'))
+
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Address_ARG_SOAP_2/Address_NE_DE_Estandar_SanMartin'))
+
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Address_ARG_SOAP_2/Address_NE_LI'))
+
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Address_ARG_SOAP_2/Address_NE_SD'))
+
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Address_ARG_SOAP_2/Address_NP_SM'))
 

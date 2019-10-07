@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>Address_NP_SM</name>
+   <name>Address_NE_CI_DTV_Cuartel_V</name>
    <tag></tag>
-   <elementGuidId>bffdb93c-ce34-4f58-8e4f-4767a57132d3</elementGuidId>
+   <elementGuidId>8acdecfa-b239-4aee-a5a1-3d6c278e5139</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <followRedirects>false</followRedirects>
@@ -20,7 +20,7 @@
          &lt;!--Optional:-->
          &lt;addressNormalize>
             &lt;!--Optional:-->
-            &lt;clientAccessCode>aea243aba41084aa098b3a70eeb63ddf&lt;/clientAccessCode>
+            &lt;clientAccessCode>9b53cf1ab4e1eb748b28e150fdc7c638&lt;/clientAccessCode>
             &lt;!--Optional:-->
             &lt;customAdaptersKeys>
                &lt;!--Zero or more repetitions:-->
@@ -31,15 +31,15 @@
                &lt;!--Optional:-->
                &lt;level1>&lt;/level1>
                &lt;!--Optional:-->
-               &lt;level2>&lt;/level2>
+               &lt;level2>La Pampa&lt;/level2>
                &lt;!--Optional:-->
                &lt;level3>&lt;/level3>
                &lt;!--Optional:-->
-               &lt;level4>BERISSO&lt;/level4>
+               &lt;level4>rolon&lt;/level4>
                &lt;!--Optional:-->
                &lt;level5>&lt;/level5>
                &lt;!--Optional:-->
-               &lt;street>MZ 5 141 BARRIO NAUTICO&lt;/street>
+               &lt;street>cuartel v est las moras 0&lt;/street>
                &lt;!--Optional:-->
                &lt;houseNumber> &lt;/houseNumber>
                &lt;!--Optional:-->
@@ -47,7 +47,7 @@
                &lt;!--Optional:-->
                &lt;unit>&lt;/unit>
                &lt;!--Optional:-->
-               &lt;postalCode>192&lt;/postalCode>
+               &lt;postalCode>&lt;/postalCode>
                &lt;!--Optional:-->
                &lt;additionalData>&lt;/additionalData>
                &lt;!--Optional:-->
@@ -65,7 +65,7 @@
    <variables>
       <defaultValue>GlobalVariable.Address_ARG2</defaultValue>
       <description></description>
-      <id>0aff093f-0ff6-4293-91f1-538272e1fac5</id>
+      <id>4d59abac-efa3-41b7-bd77-7640915b76d1</id>
       <masked>false</masked>
       <name>Address_ARG2</name>
    </variables>
@@ -83,26 +83,47 @@ RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 
-WS.verifyElementText(response, 'addressNormalize2Response.return.status', 'NP')
-WS.verifyElementText(response, 'addressNormalize2Response.return.statusReason', 'SM')
-WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.geoType', '')
+
+
+
+WS.verifyElementText(response, 'addressNormalize2Response.return.status', 'NE')
+WS.verifyElementText(response, 'addressNormalize2Response.return.statusReason', 'CI')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.geoType', '6')
 WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.level1', '')
-WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.level2', '')
-WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.level3', '')
-WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.level4', 'BERISSO')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.level2', 'LA PAMPA')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.level3', 'ATREUCO')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.level4', 'ROLON')
 WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.level5', '')
-WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.street', 'MZ 5  141 BARRIO NAUTICO')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.street', 'CUARTEL V EST LAS MORAS 0')
 WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.houseNumber', '')
 WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.floor', '')
 WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.unit', '')
-WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.latitude', '00.000000')
-WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.longitude', '00.000000')
-WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.postalCode', '192')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.latitude', '-37.168843')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.longitude', '-63.416922')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.postalCode', '')
 WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.additionalPostalCode', '')
 WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.fromStreetNumber', '0')
 WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.toStreetNumber', '0')
-WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.additionalData', '')
 WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.betweenStreet1', '')
-WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.betweenStreet2', '')</verificationScript>
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.betweenStreet2', '')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.corner', '')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.placeType', '')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.place', '')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.placeReference', '')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.numberAlternativeAddresses', '0')
+assertThat(response.getResponseText()).contains('&lt;name>level4longitudeDTV&lt;/name>&lt;value>-63.416800&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>puerta&lt;/name>&lt;value>NO RELEVADO&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>longitudLocalidad&lt;/name>&lt;value>-63.416922&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>zonaRiesgo&lt;/name>&lt;value>N&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>merlinRiskArea&lt;/name>&lt;value>N&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>nise&lt;/name>&lt;value>0&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>latitudLocalidad&lt;/name>&lt;value>-37.168843&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>level4latitudeDTV&lt;/name>&lt;value>-37.168700&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>cpa&lt;/name>&lt;value/>')
+assertThat(response.getResponseText()).contains('&lt;name>level4Longitude&lt;/name>&lt;value>-63.416922&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>NISE&lt;/name>&lt;value>0&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>postalCertifiedAddresses&lt;/name>&lt;value>NO RELEVADO&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>level4Latitude&lt;/name>&lt;value>-37.168843&lt;/value>')
+</verificationScript>
    <wsdlAddress>${Address_ARG2}</wsdlAddress>
 </WebServiceRequestEntity>

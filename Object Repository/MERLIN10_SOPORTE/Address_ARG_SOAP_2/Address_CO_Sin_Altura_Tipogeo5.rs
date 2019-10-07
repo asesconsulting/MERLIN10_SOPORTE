@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>Address_DU_DZ</name>
+   <name>Address_CO_Sin_Altura_Tipogeo5</name>
    <tag></tag>
-   <elementGuidId>20e199af-e3ca-43f0-beee-660c042479e8</elementGuidId>
+   <elementGuidId>797b2493-6b3a-4aff-bbb3-c7916fa80415</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <followRedirects>false</followRedirects>
@@ -31,15 +31,15 @@
                &lt;!--Optional:-->
                &lt;level1>&lt;/level1>
                &lt;!--Optional:-->
-               &lt;level2>&lt;/level2>
+               &lt;level2>Tucuman&lt;/level2>
                &lt;!--Optional:-->
                &lt;level3>&lt;/level3>
                &lt;!--Optional:-->
-               &lt;level4>POSADAS&lt;/level4>
+               &lt;level4>tafi viejo&lt;/level4>
                &lt;!--Optional:-->
                &lt;level5>&lt;/level5>
                &lt;!--Optional:-->
-               &lt;street>BARRIO 25 DE MAYO&lt;/street>
+               &lt;street>9 de julio&lt;/street>
                &lt;!--Optional:-->
                &lt;houseNumber> &lt;/houseNumber>
                &lt;!--Optional:-->
@@ -47,7 +47,7 @@
                &lt;!--Optional:-->
                &lt;unit>&lt;/unit>
                &lt;!--Optional:-->
-               &lt;postalCode>3300&lt;/postalCode>
+               &lt;postalCode>&lt;/postalCode>
                &lt;!--Optional:-->
                &lt;additionalData>&lt;/additionalData>
                &lt;!--Optional:-->
@@ -65,7 +65,7 @@
    <variables>
       <defaultValue>GlobalVariable.Address_ARG2</defaultValue>
       <description></description>
-      <id>268a6d3b-033a-4a20-a1ea-e28800ae574a</id>
+      <id>1398d2bc-b06a-4075-891a-de3127067976</id>
       <masked>false</masked>
       <name>Address_ARG2</name>
    </variables>
@@ -83,29 +83,43 @@ RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 
-WS.verifyElementText(response, 'addressNormalize2Response.return.status', 'DU')
-WS.verifyElementText(response, 'addressNormalize2Response.return.statusReason', 'DZ')
-WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.geoType', '')
+WS.verifyElementText(response, 'addressNormalize2Response.return.status', 'NE')
+WS.verifyElementText(response, 'addressNormalize2Response.return.statusReason', 'AI')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.geoType', '5')
 WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.level1', '')
-WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.level2', 'MISIONES')
-WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.level3', 'CAPITAL')
-WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.level4', 'POSADAS')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.level2', 'TUCUMAN')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.level3', 'TAFI VIEJO')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.level4', 'TAFI VIEJO')
 WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.level5', '')
-WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.street', 'BARRIO 25 DE MAYO')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.streetType', '')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.street', '9 DE JULIO')
 WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.houseNumber', '')
 WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.floor', '')
 WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.unit', '')
-WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.latitude', '-27.368742')
-WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.longitude', '-55.894215')
-WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.postalCode', '3300')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.latitude', '-26.730999')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.longitude', '-65.256403')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.postalCode', '4103')
 WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.additionalPostalCode', '')
-WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.fromStreetNumber', '0')
-WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.toStreetNumber', '0')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.fromStreetNumber', '1')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.toStreetNumber', '1100')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.additionalData', '')
 WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.betweenStreet1', '')
 WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.betweenStreet2', '')
-WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.numberAlternativeAddresses', '2')
-
-
-</verificationScript>
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.corner', '')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.placeType', '')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.place', '')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.placeReference', '')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.numberAlternativeAddresses', '0')
+assertThat(response.getResponseText()).contains('&lt;name>longitudLocalidad&lt;/name>&lt;value>-65.251931&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>nise&lt;/name>&lt;value>0&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>cpa&lt;/name>&lt;value/>')
+assertThat(response.getResponseText()).contains('&lt;name>level4Latitude&lt;/name>&lt;value>-26.739130&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>postalCertifiedAddresses&lt;/name>&lt;value>NO RELEVADO&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>puerta&lt;/name>&lt;value>NO RELEVADO&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>level4Longitude&lt;/name>&lt;value>-65.251931&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>merlinRiskArea&lt;/name>&lt;value>N&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>NISE&lt;/name>&lt;value>0&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>zonaRiesgo&lt;/name>&lt;value>N&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>latitudLocalidad&lt;/name>&lt;value>-26.739130&lt;/value>')</verificationScript>
    <wsdlAddress>${Address_ARG2}</wsdlAddress>
 </WebServiceRequestEntity>

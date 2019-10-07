@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>Address_DU_DA</name>
+   <name>Address_NE_LI</name>
    <tag></tag>
-   <elementGuidId>196d7884-f9be-4dab-a897-0e61f3a7529c</elementGuidId>
+   <elementGuidId>e63b8b54-7bd3-4e45-ba1e-f26e1cdaee96</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <followRedirects>false</followRedirects>
@@ -20,7 +20,7 @@
          &lt;!--Optional:-->
          &lt;addressNormalize>
             &lt;!--Optional:-->
-            &lt;clientAccessCode>aea243aba41084aa098b3a70eeb63ddf&lt;/clientAccessCode>
+            &lt;clientAccessCode>9b53cf1ab4e1eb748b28e150fdc7c638&lt;/clientAccessCode>
             &lt;!--Optional:-->
             &lt;customAdaptersKeys>
                &lt;!--Zero or more repetitions:-->
@@ -31,15 +31,15 @@
                &lt;!--Optional:-->
                &lt;level1>&lt;/level1>
                &lt;!--Optional:-->
-               &lt;level2>&lt;/level2>
+               &lt;level2>MENDOZA&lt;/level2>
                &lt;!--Optional:-->
                &lt;level3>&lt;/level3>
                &lt;!--Optional:-->
-               &lt;level4>Villa Ballester&lt;/level4>
+               &lt;level4>CAPITAL FEDERAL&lt;/level4>
                &lt;!--Optional:-->
                &lt;level5>&lt;/level5>
                &lt;!--Optional:-->
-               &lt;street>SAN JOSE DE FLORES 6001&lt;/street>
+               &lt;street>ALPATACAL 1489&lt;/street>
                &lt;!--Optional:-->
                &lt;houseNumber> &lt;/houseNumber>
                &lt;!--Optional:-->
@@ -47,7 +47,7 @@
                &lt;!--Optional:-->
                &lt;unit>&lt;/unit>
                &lt;!--Optional:-->
-               &lt;postalCode>1653&lt;/postalCode>
+               &lt;postalCode>&lt;/postalCode>
                &lt;!--Optional:-->
                &lt;additionalData>&lt;/additionalData>
                &lt;!--Optional:-->
@@ -65,7 +65,7 @@
    <variables>
       <defaultValue>GlobalVariable.Address_ARG2</defaultValue>
       <description></description>
-      <id>570e04ea-3e46-4de0-baed-f16aed15b09c</id>
+      <id>4d59abac-efa3-41b7-bd77-7640915b76d1</id>
       <masked>false</masked>
       <name>Address_ARG2</name>
    </variables>
@@ -83,38 +83,47 @@ RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 
-WS.verifyElementText(response, 'addressNormalize2Response.return.status', 'DU')
-WS.verifyElementText(response, 'addressNormalize2Response.return.statusReason', 'DA')
+
+
+
+WS.verifyElementText(response, 'addressNormalize2Response.return.status', 'NE')
+WS.verifyElementText(response, 'addressNormalize2Response.return.statusReason', 'LI')
 WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.geoType', '')
-WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.level2', 'BUENOS AIRES')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.level1', '')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.level2', 'MENDOZA')
 WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.level3', '')
-WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.level4', 'VILLA BALLESTER')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.level4', 'CAPITAL FEDERAL')
 WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.level5', '')
-WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.street', 'SAN JOSE DE FLORES')
-WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.houseNumber', '6001')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.street', 'ALPATACAL 1489')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.houseNumber', '')
 WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.floor', '')
 WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.unit', '')
 WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.latitude', '00.000000')
 WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.longitude', '00.000000')
-WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.postalCode', '1653')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.postalCode', '')
 WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.additionalPostalCode', '')
 WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.fromStreetNumber', '0')
 WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.toStreetNumber', '0')
 WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.betweenStreet1', '')
 WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.betweenStreet2', '')
-WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.numberAlternativeAddresses', '6')
-
-
-WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.alternativeAddresses[0].geoType', '8')
-WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.alternativeAddresses[0].level2', 'BUENOS AIRES')
-WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.alternativeAddresses[0].level3', '')
-WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.alternativeAddresses[0].level4', 'VILLA GODOY CRUZ')
-WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.alternativeAddresses[0].level5', '')
-WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.alternativeAddresses[0].street', 'SAN JOSE DE FLORES')
-WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.alternativeAddresses[0].houseNumber', '6001')
-WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.alternativeAddresses[0].latitude', '00.000000')
-WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.alternativeAddresses[0].longitude', '00.000000')
-WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.alternativeAddresses[0].fromStreetNumber', '6201')
-WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.alternativeAddresses[0].toStreetNumber', '6900')</verificationScript>
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.additionalData', '')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.corner', '')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.placeType', '')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.place', '')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.placeReference', '')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.numberAlternativeAddresses', '0')
+assertThat(response.getResponseText()).contains('&lt;name>level4longitudeDTV&lt;/name>&lt;value/>')
+assertThat(response.getResponseText()).contains('&lt;name>latitudLocalidad&lt;/name>&lt;value/>')
+assertThat(response.getResponseText()).contains('&lt;name>level4Longitude&lt;/name>&lt;value/>')
+assertThat(response.getResponseText()).contains('&lt;name>zonaRiesgo&lt;/name>&lt;value>N&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>puerta&lt;/name>&lt;value>NO RELEVADO&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>level4latitudeDTV&lt;/name>&lt;value/>')
+assertThat(response.getResponseText()).contains('&lt;name>merlinRiskArea&lt;/name>&lt;value>N&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>nise&lt;/name>&lt;value>0&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>cpa&lt;/name>&lt;value/>')
+assertThat(response.getResponseText()).contains('&lt;name>level4Latitude&lt;/name>&lt;value/>')
+assertThat(response.getResponseText()).contains('&lt;name>longitudLocalidad&lt;/name>&lt;value/>')
+assertThat(response.getResponseText()).contains('&lt;name>nise&lt;/name>&lt;value>0&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>postalCertifiedAddresses&lt;/name>&lt;value>NO RELEVADO&lt;/value>')</verificationScript>
    <wsdlAddress>${Address_ARG2}</wsdlAddress>
 </WebServiceRequestEntity>

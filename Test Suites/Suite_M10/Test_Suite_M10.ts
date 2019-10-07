@@ -40,4 +40,10 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/Merlin10_TestCases/Tributary_ARGM10/Tributary_ARGTEST</testCaseId>
    </testCaseLink>
+   <testCaseLink>
+      <guid>1ed0623a-94b0-439f-9e00-b6640913aa59</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Merlin10_TestCases/Patentes_ARGM10/Patentes_ARGTEST</testCaseId>
+   </testCaseLink>
 </TestSuiteEntity>
