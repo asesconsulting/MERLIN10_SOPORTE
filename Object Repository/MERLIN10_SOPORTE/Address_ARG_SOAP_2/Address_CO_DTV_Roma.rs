@@ -83,8 +83,45 @@ RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 
+/**verificacion test case**/
 
+WS.verifyElementText(response, 'addressNormalize2Response.return.status', 'CO')
+WS.verifyElementText(response, 'addressNormalize2Response.return.statusReason', 'SM')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.geoType', '1')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.level1', '')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.level2', 'BUENOS AIRES')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.level3', 'LANUS')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.level4', 'MONTE CHINGOLO')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.level5', 'VILLA INDEPENDENCIA')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.street', 'ROMA')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.houseNumber', '4128')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.floor', '')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.unit', '')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.latitude', '-34.741363')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.longitude', '-58.371764')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.postalCode', '1825')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.additionalPostalCode', 'B1825BPB')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.fromStreetNumber', '3401')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.toStreetNumber', '4800')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.betweenStreet1', 'GRANADEROS')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.betweenStreet2', 'CORVALAN')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.corner', '')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.placeType', '')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.place', '')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.placeReference', '')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.numberAlternativeAddresses', '0')
+assertThat(response.getResponseText()).contains('&lt;name>level4Longitude&lt;/name>&lt;value>-58.357121&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>nise&lt;/name>&lt;value>4&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>tipoVivienda&lt;/name>&lt;value>otro&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>level4Latitude&lt;/name>&lt;value>-34.728784&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>maqStatus&lt;/name>&lt;value>NO&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>maqValue&lt;/name>&lt;value>&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>maqConcept&lt;/name>&lt;value>&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>postalCertifiedAddresses&lt;/name>&lt;value>SI&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>empresa&lt;/name>&lt;value>NO&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>merlinRiskArea&lt;/name>&lt;value>N&lt;/value>')
 
+/**verificacion WS unitaria
 
 WS.verifyElementText(response, 'addressNormalize2Response.return.status', 'CO')
 WS.verifyElementText(response, 'addressNormalize2Response.return.statusReason', 'SM')
@@ -120,6 +157,8 @@ assertThat(response.getResponseText()).contains('&lt;name>maqValue&lt;/name>&lt;
 assertThat(response.getResponseText()).contains('&lt;name>maqConcept&lt;/name>&lt;value/>')
 assertThat(response.getResponseText()).contains('&lt;name>postalCertifiedAddresses&lt;/name>&lt;value>SI&lt;/value>')
 assertThat(response.getResponseText()).contains('&lt;name>empresa&lt;/name>&lt;value>NO&lt;/value>')
-assertThat(response.getResponseText()).contains('&lt;name>merlinRiskArea&lt;/name>&lt;value>N&lt;/value>')</verificationScript>
+assertThat(response.getResponseText()).contains('&lt;name>merlinRiskArea&lt;/name>&lt;value>N&lt;/value>')
+**/
+</verificationScript>
    <wsdlAddress>${Address_ARG2}</wsdlAddress>
 </WebServiceRequestEntity>

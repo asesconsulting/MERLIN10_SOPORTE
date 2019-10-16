@@ -13,13 +13,13 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Patentes_ARGM10/Patentes_CO_fedepat'))
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Patentes_ARGM10/Patentes_CO_FedePat'))
 
-WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Patentes_ARGM10/Patentes_CO_smotorsserial'))
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Patentes_ARGM10/Patentes_CO_Sin_Motor_Serial'))
 
 WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Patentes_ARGM10/Patentes_CO_standar'))
 
-WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Patentes_ARGM10/Patentes_SD_fedepat'))
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Patentes_ARGM10/Patentes_SD_FedePat'))
 
 WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Patentes_ARGM10/Patentes_SD_standar'))
 

@@ -99,6 +99,11 @@ WS.verifyElementText(response, 'phoneNormalize2Response.return.nPhone.ddi', '')
 WS.verifyElementText(response, 'phoneNormalize2Response.return.nPhone.characteristic', '')
 WS.verifyElementText(response, 'phoneNormalize2Response.return.nPhone.phoneNumber', '1105847852')
 WS.verifyElementText(response, 'phoneNormalize2Response.return.nPhone.validated', 'NO')
-WS.verifyElementText(response, 'phoneNormalize2Response.return.nPhone.additionalData', '')</verificationScript>
+WS.verifyElementText(response, 'phoneNormalize2Response.return.nPhone.additionalData', '')
+assertThat(response.getResponseText()).contains('&lt;name>doNotCallRegistry&lt;/name>&lt;value>NO&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>directory&lt;/name>&lt;value>NO&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>fullCellphoneNumber&lt;/name>&lt;value>1105847852&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>telefonoCompleto&lt;/name>&lt;value>1105847852&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>fullPhone&lt;/name>&lt;value>1105847852&lt;/value>')</verificationScript>
    <wsdlAddress>${Phone_ARG2}</wsdlAddress>
 </WebServiceRequestEntity>

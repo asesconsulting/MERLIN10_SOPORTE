@@ -41,7 +41,7 @@
                &lt;!--Optional:-->
                &lt;characteristic> &lt;/characteristic>
                &lt;!--Optional:-->
-               &lt;phoneNumber>1149233521&lt;/phoneNumber>
+               &lt;phoneNumber>1169338493&lt;/phoneNumber>
                &lt;!--Optional:-->
                &lt;postalCode> &lt;/postalCode>
                &lt;!--Optional:-->
@@ -84,25 +84,20 @@ WS.verifyElementText(response, 'phoneNormalize2Response.return.status', 'CO')
 WS.verifyElementText(response, 'phoneNormalize2Response.return.statusReason', 'SM')
 WS.verifyElementText(response, 'phoneNormalize2Response.return.nPhone.level1', 'AR')
 WS.verifyElementText(response, 'phoneNormalize2Response.return.nPhone.level2', 'BUENOS AIRES')
-WS.verifyElementText(response, 'phoneNormalize2Response.return.nPhone.level3', 'TRES DE FEBRERO')
-WS.verifyElementText(response, 'phoneNormalize2Response.return.nPhone.level4', '11 DE SEPTIEMBRE')
+WS.verifyElementText(response, 'phoneNormalize2Response.return.nPhone.level3', '')
+WS.verifyElementText(response, 'phoneNormalize2Response.return.nPhone.level4', '')
 WS.verifyElementText(response, 'phoneNormalize2Response.return.nPhone.level5', '')
 WS.verifyElementText(response, 'phoneNormalize2Response.return.nPhone.postalCode', '0')
 WS.verifyElementText(response, 'phoneNormalize2Response.return.nPhone.ddi', '')
 WS.verifyElementText(response, 'phoneNormalize2Response.return.nPhone.ddn', '011')
-WS.verifyElementText(response, 'phoneNormalize2Response.return.nPhone.characteristic', '4923')
-WS.verifyElementText(response, 'phoneNormalize2Response.return.nPhone.phoneNumber', '3521')
+WS.verifyElementText(response, 'phoneNormalize2Response.return.nPhone.characteristic', '6933')
+WS.verifyElementText(response, 'phoneNormalize2Response.return.nPhone.phoneNumber', '8493')
 WS.verifyElementText(response, 'phoneNormalize2Response.return.nPhone.validated', 'NO')
 WS.verifyElementText(response, 'phoneNormalize2Response.return.nPhone.additionalData', '')
-
-
-
-
-WS.verifyElementText(response, 'phoneNormalize2Response.return.nPhone.merlinCustomValues.merlinCustomValues[0].value', '01149233521')
-
-
-
-
-</verificationScript>
+assertThat(response.getResponseText()).contains('&lt;name>fullCellphoneNumber&lt;/name>&lt;value>1169338493&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>fullPhone&lt;/name>&lt;value>0111569338493&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>doNotCallRegistry&lt;/name>&lt;value>SI&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>directory&lt;/name>&lt;value>CE&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>telefonoCompleto&lt;/name>&lt;value>0111569338493&lt;/value>')</verificationScript>
    <wsdlAddress>${Phone_ARG2}</wsdlAddress>
 </WebServiceRequestEntity>

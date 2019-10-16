@@ -77,6 +77,7 @@ RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 
+
 WS.verifyElementText(response, 'enrichmentResponse.return.status', 'DU')
 WS.verifyElementText(response, 'enrichmentResponse.return.statusReason', 'SM')
 WS.verifyElementText(response, 'enrichmentResponse.return.remainingCredits', '1')

@@ -3,7 +3,7 @@
    <description></description>
    <name>Patentes_SD_standar</name>
    <tag></tag>
-   <elementGuidId>cd39037a-d178-4b07-89af-6731a87819ba</elementGuidId>
+   <elementGuidId>e5c85668-7783-4d0b-940c-2fea03db23cf</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <followRedirects>false</followRedirects>
@@ -62,7 +62,6 @@ import internal.GlobalVariable as GlobalVariable
 RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
-
 
 
 WS.verifyElementText(response, 'infoDomainServiceResponse.return.status', 'SD')

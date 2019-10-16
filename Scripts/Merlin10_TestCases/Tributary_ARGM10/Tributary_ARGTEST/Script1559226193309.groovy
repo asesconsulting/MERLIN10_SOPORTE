@@ -13,11 +13,11 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Tributary_ARGM10/CondTrib_NE_Estandar'))
+
 WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Tributary_ARGM10/CondTrib_VA'))
 
-WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Tributary_ARGM10/CondTrib_NE_standar'))
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Tributary_ARGM10/CondTrib_VA_Estandar'))
 
-WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Tributary_ARGM10/CondTrib_VA_standar'))
-
-WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Tributary_ARGM10/CondTrib_VA_MonoTrib'))
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Tributary_ARGM10/CondTrib_VA_Monotributo'))
 

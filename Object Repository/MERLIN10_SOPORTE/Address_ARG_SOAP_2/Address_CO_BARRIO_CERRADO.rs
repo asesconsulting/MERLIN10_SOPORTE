@@ -83,6 +83,48 @@ RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 
+/**verificacion testcase**/
+
+WS.verifyElementText(response, 'addressNormalize2Response.return.status', 'CO')
+WS.verifyElementText(response, 'addressNormalize2Response.return.statusReason', 'SM')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.geoType', '11')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.level1', '')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.level2', 'SANTA FE')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.level3', 'LA CAPITAL')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.level4', 'SANTO TOME')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.level5', 'CLUB DE CAMPO EL PASO')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.streetType', '')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.street', 'BO CLUB DE CAMPO EL PASO')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.houseNumber', '')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.floor', '')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.unit', '')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.latitude', '-31.636417')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.longitude', '-60.758962')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.postalCode', '3016')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.additionalPostalCode', '')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.fromStreetNumber', '0')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.toStreetNumber', '0')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.additionalData', '')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.betweenStreet1', '')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.betweenStreet2', '')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.corner', '')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.placeType', '')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.place', '')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.placeReference', '-31.6364; -60.759')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.numberAlternativeAddresses', '0')
+assertThat(response.getResponseText()).contains('&lt;name>longitudLocalidad&lt;/name>&lt;value>-60.762756&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>nise&lt;/name>&lt;value>0&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>level4Latitude&lt;/name>&lt;value>-31.667294&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>level4Longitude&lt;/name>&lt;value>-60.762756&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>NISE&lt;/name>&lt;value>0&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>latitudLocalidad&lt;/name>&lt;value>-31.667294&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>alturaEntrada&lt;/name>&lt;value>0&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>calleEntrada&lt;/name>&lt;value>&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>nivel4Abreviada15&lt;/name>&lt;value>SANTO TOME&lt;/value>')
+
+
+/**verificacion WS unitaria
+
 WS.verifyElementText(response, 'addressNormalize2Response.return.status', 'CO')
 WS.verifyElementText(response, 'addressNormalize2Response.return.statusReason', 'SM')
 WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.geoType', '11')
@@ -119,6 +161,6 @@ assertThat(response.getResponseText()).contains('&lt;name>latitudLocalidad&lt;/n
 assertThat(response.getResponseText()).contains('&lt;name>alturaEntrada&lt;/name>&lt;value>0&lt;/value>')
 assertThat(response.getResponseText()).contains('&lt;name>calleEntrada&lt;/name>&lt;value/>')
 assertThat(response.getResponseText()).contains('&lt;name>nivel4Abreviada15&lt;/name>&lt;value>SANTO TOME&lt;/value>')
-</verificationScript>
+**/</verificationScript>
    <wsdlAddress>${Address_ARG2}</wsdlAddress>
 </WebServiceRequestEntity>

@@ -70,7 +70,6 @@ ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 
 WS.verifyElementText(response, 'nameNormalize2Response.return.status', 'NP')
 WS.verifyElementText(response, 'nameNormalize2Response.return.statusReason', 'SM')
-
 WS.verifyElementText(response, 'nameNormalize2Response.return.nName.name', '')
 WS.verifyElementText(response, 'nameNormalize2Response.return.nName.lastName', 'ROSA MARIA ROSA MARIA')
 WS.verifyElementText(response, 'nameNormalize2Response.return.nName.personType', '')

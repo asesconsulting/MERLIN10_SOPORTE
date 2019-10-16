@@ -3,7 +3,7 @@
    <description></description>
    <name>Enrichment_HS</name>
    <tag></tag>
-   <elementGuidId>8f1f5811-25df-42fb-a947-f85890265a37</elementGuidId>
+   <elementGuidId>e1af17e7-9b3f-4af5-8170-1c0c9dc95d42</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <followRedirects>false</followRedirects>
@@ -19,8 +19,7 @@
       &lt;soap:enrichment>
          &lt;!--Optional:-->
          &lt;enrichment>
-            &lt;!--Optional:-->
-            &lt;clientAccessCode>a1edeae2a5bd4cde241fdfdb193ca13c&lt;/clientAccessCode>
+            &lt;!--Optional:--> &lt;clientAccessCode>a1edeae2a5bd4cde241fdfdb193ca13c&lt;/clientAccessCode>
             &lt;!--Optional:-->
             &lt;customAdaptersKeys>
                &lt;!--Zero or more repetitions:-->
@@ -79,6 +78,67 @@ ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 
 
 
-</verificationScript>
+WS.verifyElementText(response, 'enrichmentResponse.return.status', 'EN')
+WS.verifyElementText(response, 'enrichmentResponse.return.statusReason', 'SM')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>TipoTributario&lt;/name>&lt;label>&lt;/label>&lt;value>CUIT PERSONA FISICA&lt;/value>&lt;index>0&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>NumeroTributario&lt;/name>&lt;label>&lt;/label>&lt;value>27104774755&lt;/value>&lt;index>1&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>TipoDocumento&lt;/name>&lt;label>&lt;/label>&lt;value>DNI&lt;/value>&lt;index>2&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>NroDocumento&lt;/name>&lt;label>&lt;/label>&lt;value>10477475&lt;/value>&lt;index>3&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>Apellidos&lt;/name>&lt;label>&lt;/label>&lt;value>VILLAR&lt;/value>&lt;index>4&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>Nombres&lt;/name>&lt;label>&lt;/label>&lt;value>NELIDA MIRTA&lt;/value>&lt;index>5&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>Genero&lt;/name>&lt;label>&lt;/label>&lt;value>F&lt;/value>&lt;index>6&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>FechaNacimiento&lt;/name>&lt;label>&lt;/label>&lt;value>29/08/1952&lt;/value>&lt;index>7&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>EstadoCivil&lt;/name>&lt;label>&lt;/label>&lt;value>&lt;/value>&lt;index>8&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>NivelSocioEconomico&lt;/name>&lt;label>&lt;/label>&lt;value>D2&lt;/value>&lt;index>9&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>Calle&lt;/name>&lt;label>&lt;/label>&lt;value>PJE JUAN HIPOLITO VIEYTES&lt;/value>&lt;index>10&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>Numero&lt;/name>&lt;label>&lt;/label>&lt;value>986&lt;/value>&lt;index>11&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>Piso&lt;/name>&lt;label>&lt;/label>&lt;value>&lt;/value>&lt;index>12&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>Depto&lt;/name>&lt;label>&lt;/label>&lt;value>&lt;/value>&lt;index>13&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>Localidad&lt;/name>&lt;label>&lt;/label>&lt;value>SANTA ROSA&lt;/value>&lt;index>14&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>Provincia&lt;/name>&lt;label>&lt;/label>&lt;value>LA PAMPA&lt;/value>&lt;index>15&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>CodigoPostal&lt;/name>&lt;label>&lt;/label>&lt;value>6300&lt;/value>&lt;index>16&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>Latitud&lt;/name>&lt;label>&lt;/label>&lt;value>-36.627357&lt;/value>&lt;index>17&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>Longitud&lt;/name>&lt;label>&lt;/label>&lt;value>-64.297049&lt;/value>&lt;index>18&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>Tipo&lt;/name>&lt;label>&lt;/label>&lt;value>F&lt;/value>&lt;index>19&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>Normalizacion&lt;/name>&lt;label>&lt;/label>&lt;value>VA&lt;/value>&lt;index>20&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>Calle&lt;/name>&lt;label>&lt;/label>&lt;value>ECUADOR&lt;/value>&lt;index>21&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>Numero&lt;/name>&lt;label>&lt;/label>&lt;value>923&lt;/value>&lt;index>22&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>Piso&lt;/name>&lt;label>&lt;/label>&lt;value>&lt;/value>&lt;index>23&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>Depto&lt;/name>&lt;label>&lt;/label>&lt;value>&lt;/value>&lt;index>24&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>Localidad&lt;/name>&lt;label>&lt;/label>&lt;value>CIUDAD AUTONOMA BUENOS AIRES&lt;/value>&lt;index>25&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>Provincia&lt;/name>&lt;label>&lt;/label>&lt;value>CAPITAL FEDERAL&lt;/value>&lt;index>26&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>CodigoPostal&lt;/name>&lt;label>&lt;/label>&lt;value>1214&lt;/value>&lt;index>27&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>Latitud&lt;/name>&lt;label>&lt;/label>&lt;value>-34.599248&lt;/value>&lt;index>28&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>Longitud&lt;/name>&lt;label>&lt;/label>&lt;value>-58.405948&lt;/value>&lt;index>29&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>Tipo&lt;/name>&lt;label>&lt;/label>&lt;value>&lt;/value>&lt;index>30&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>Normalizacion&lt;/name>&lt;label>&lt;/label>&lt;value>VA&lt;/value>&lt;index>31&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>Prefijo&lt;/name>&lt;label>&lt;/label>&lt;value>011&lt;/value>&lt;index>32&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>Numero&lt;/name>&lt;label>&lt;/label>&lt;value>49919001&lt;/value>&lt;index>33&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>Tipo&lt;/name>&lt;label>&lt;/label>&lt;value>MOVIL&lt;/value>&lt;index>34&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>NoLlame&lt;/name>&lt;label>&lt;/label>&lt;value>NO&lt;/value>&lt;index>35&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>Prefijo&lt;/name>&lt;label>&lt;/label>&lt;value>02954&lt;/value>&lt;index>36&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>Numero&lt;/name>&lt;label>&lt;/label>&lt;value>613824&lt;/value>&lt;index>37&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>Tipo&lt;/name>&lt;label>&lt;/label>&lt;value>MOVIL&lt;/value>&lt;index>38&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>NoLlame&lt;/name>&lt;label>&lt;/label>&lt;value>NO&lt;/value>&lt;index>39&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>Prefijo&lt;/name>&lt;label>&lt;/label>&lt;value>02954&lt;/value>&lt;index>40&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>Numero&lt;/name>&lt;label>&lt;/label>&lt;value>438494&lt;/value>&lt;index>41&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>Tipo&lt;/name>&lt;label>&lt;/label>&lt;value>FIJO&lt;/value>&lt;index>42&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>NoLlame&lt;/name>&lt;label>&lt;/label>&lt;value>NO&lt;/value>&lt;index>43&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>Prefijo&lt;/name>&lt;label>&lt;/label>&lt;value>02954&lt;/value>&lt;index>44&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>Numero&lt;/name>&lt;label>&lt;/label>&lt;value>660229&lt;/value>&lt;index>45&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>Tipo&lt;/name>&lt;label>&lt;/label>&lt;value>MOVIL&lt;/value>&lt;index>46&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>NoLlame&lt;/name>&lt;label>&lt;/label>&lt;value>NO&lt;/value>&lt;index>47&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>Prefijo&lt;/name>&lt;label>&lt;/label>&lt;value>&lt;/value>&lt;index>48&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>Numero&lt;/name>&lt;label>&lt;/label>&lt;value>&lt;/value>&lt;index>49&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>Tipo&lt;/name>&lt;label>&lt;/label>&lt;value>&lt;/value>&lt;index>50&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>NoLlame&lt;/name>&lt;label>&lt;/label>&lt;value>&lt;/value>&lt;index>51&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>Prefijo&lt;/name>&lt;label>&lt;/label>&lt;value>&lt;/value>&lt;index>52&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>Numero&lt;/name>&lt;label>&lt;/label>&lt;value>&lt;/value>&lt;index>53&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>Tipo&lt;/name>&lt;label>&lt;/label>&lt;value>&lt;/value>&lt;index>54&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>NoLlame&lt;/name>&lt;label>&lt;/label>&lt;value>&lt;/value>&lt;index>55&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>Email&lt;/name>&lt;label>&lt;/label>&lt;value>&lt;/value>&lt;index>56&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>Tipo&lt;/name>&lt;label>&lt;/label>&lt;value>&lt;/value>&lt;index>57&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>Email&lt;/name>&lt;label>&lt;/label>&lt;value>&lt;/value>&lt;index>58&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')
+assertThat(response.getResponseText()).contains('&lt;element>&lt;name>Tipo&lt;/name>&lt;label>&lt;/label>&lt;value>&lt;/value>&lt;index>59&lt;/index>&lt;dataType>&lt;/dataType>&lt;/element>')</verificationScript>
    <wsdlAddress>${Enrichment_ARG2}</wsdlAddress>
 </WebServiceRequestEntity>

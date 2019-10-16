@@ -84,7 +84,52 @@ RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 
 
+/*verificacion TestCase*/
 
+WS.verifyElementText(response, 'addressNormalize2Response.return.status', 'DU')
+WS.verifyElementText(response, 'addressNormalize2Response.return.statusReason', 'DA')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.geoType', '')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.level1', '')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.level2', 'BUENOS AIRES')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.level3', '')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.level4', 'FLORENCIO VARELA')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.level5', '')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.street', 'RUTA PROVINCIAL 36')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.houseNumber', '3000')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.floor', '')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.unit', '')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.latitude', '00.000000')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.longitude', '00.000000')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.postalCode', '1888')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.additionalPostalCode', '')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.fromStreetNumber', '0')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.toStreetNumber', '0')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.betweenStreet1', '')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.betweenStreet2', '')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.corner', '')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.placeType', '')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.place', '')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.placeReference', '')
+WS.verifyElementText(response, 'addressNormalize2Response.return.nAddress.numberAlternativeAddresses', '6')
+assertThat(response.getResponseText()).contains('&lt;alternativeAddresses>&lt;geoType>8&lt;/geoType>&lt;level1>&lt;/level1>&lt;level2>BUENOS AIRES&lt;/level2>&lt;level3>&lt;/level3>&lt;level4>ZEBALLOS&lt;/level4>&lt;level5>&lt;/level5>&lt;street>RUTA PROV 36&lt;/street>&lt;houseNumber>3000&lt;/houseNumber>&lt;latitude>00.000000&lt;/latitude>&lt;longitude>00.000000&lt;/longitude>&lt;postalCode>&lt;/postalCode>&lt;fromStreetNumber>21,11&lt;/fromStreetNumber>&lt;toStreetNumber>22,5&lt;/toStreetNumber>&lt;/alternativeAddresses>')
+assertThat(response.getResponseText()).contains('&lt;alternativeAddresses>&lt;geoType>8&lt;/geoType>&lt;level1>&lt;/level1>&lt;level2>BUENOS AIRES&lt;/level2>&lt;level3>&lt;/level3>&lt;level4>QUILMES OESTE&lt;/level4>&lt;level5>&lt;/level5>&lt;street>RUTA PROV 36&lt;/street>&lt;houseNumber>3000&lt;/houseNumber>&lt;latitude>00.000000&lt;/latitude>&lt;longitude>00.000000&lt;/longitude>&lt;postalCode>&lt;/postalCode>&lt;fromStreetNumber>11,31&lt;/fromStreetNumber>&lt;toStreetNumber>16,36&lt;/toStreetNumber>&lt;/alternativeAddresses>')
+assertThat(response.getResponseText()).contains('&lt;alternativeAddresses>&lt;geoType>8&lt;/geoType>&lt;level1>&lt;/level1>&lt;level2>BUENOS AIRES&lt;/level2>&lt;level3>&lt;/level3>&lt;level4>INGENIERO ALLAN&lt;/level4>&lt;level5>&lt;/level5>&lt;street>RUTA PROV 36&lt;/street>&lt;houseNumber>3000&lt;/houseNumber>&lt;latitude>00.000000&lt;/latitude>&lt;longitude>00.000000&lt;/longitude>&lt;postalCode>&lt;/postalCode>&lt;fromStreetNumber>25,63&lt;/fromStreetNumber>&lt;toStreetNumber>28,00&lt;/toStreetNumber>&lt;/alternativeAddresses>')
+assertThat(response.getResponseText()).contains('&lt;alternativeAddresses>&lt;geoType>8&lt;/geoType>&lt;level1>&lt;/level1>&lt;level2>BUENOS AIRES&lt;/level2>&lt;level3>&lt;/level3>&lt;level4>EZPELETA OESTE&lt;/level4>&lt;level5>&lt;/level5>&lt;street>RUTA PROV 36&lt;/street>&lt;houseNumber>3000&lt;/houseNumber>&lt;latitude>00.000000&lt;/latitude>&lt;longitude>00.000000&lt;/longitude>&lt;postalCode>&lt;/postalCode>&lt;fromStreetNumber>16,36&lt;/fromStreetNumber>&lt;toStreetNumber>16,4&lt;/toStreetNumber>&lt;/alternativeAddresses>')
+assertThat(response.getResponseText()).contains('&lt;alternativeAddresses>&lt;geoType>8&lt;/geoType>&lt;level1>&lt;/level1>&lt;level2>BUENOS AIRES&lt;/level2>&lt;level3>&lt;/level3>&lt;level4>BOSQUES&lt;/level4>&lt;level5>&lt;/level5>&lt;street>RUTA PROV 36&lt;/street>&lt;houseNumber>3000&lt;/houseNumber>&lt;latitude>00.000000&lt;/latitude>&lt;longitude>00.000000&lt;/longitude>&lt;postalCode>&lt;/postalCode>&lt;fromStreetNumber>22,51&lt;/fromStreetNumber>&lt;toStreetNumber>25,63&lt;/toStreetNumber>&lt;/alternativeAddresses>')
+assertThat(response.getResponseText()).contains('&lt;alternativeAddresses>&lt;geoType>8&lt;/geoType>&lt;level1>&lt;/level1>&lt;level2>BUENOS AIRES&lt;/level2>&lt;level3>&lt;/level3>&lt;level4>FLORENCIO VARELA&lt;/level4>&lt;level5>&lt;/level5>&lt;street>RUTA PROV 36&lt;/street>&lt;houseNumber>3000&lt;/houseNumber>&lt;latitude>00.000000&lt;/latitude>&lt;longitude>00.000000&lt;/longitude>&lt;postalCode>&lt;/postalCode>&lt;fromStreetNumber>16,41&lt;/fromStreetNumber>&lt;toStreetNumber>21,11&lt;/toStreetNumber>&lt;/alternativeAddresses>')
+assertThat(response.getResponseText()).contains('&lt;name>level4Latitude&lt;/name>&lt;value>-34.795591&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>level4Longitude&lt;/name>&lt;value>-58.270691&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>cpa&lt;/name>&lt;value>&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>puerta&lt;/name>&lt;value>NO RELEVADO&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>NISE&lt;/name>&lt;value>0&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>latitudLocalidad&lt;/name>&lt;value>-34.795591&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>longitudLocalidad&lt;/name>&lt;value>-58.270691&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>zonaRiesgo&lt;/name>&lt;value>N&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>merlinRiskArea&lt;/name>&lt;value>N&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>postalCertifiedAddresses&lt;/name>&lt;value>NO RELEVADO&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>nise&lt;/name>&lt;value>0&lt;/value>')
+
+/**verificacion WS unitaria
 
 WS.verifyElementText(response, 'addressNormalize2Response.return.status', 'DU')
 WS.verifyElementText(response, 'addressNormalize2Response.return.statusReason', 'DA')
@@ -127,6 +172,7 @@ assertThat(response.getResponseText()).contains('&lt;name>longitudLocalidad&lt;/
 assertThat(response.getResponseText()).contains('&lt;name>zonaRiesgo&lt;/name>&lt;value>N&lt;/value>')
 assertThat(response.getResponseText()).contains('&lt;name>merlinRiskArea&lt;/name>&lt;value>N&lt;/value>')
 assertThat(response.getResponseText()).contains('&lt;name>postalCertifiedAddresses&lt;/name>&lt;value>NO RELEVADO&lt;/value>')
-assertThat(response.getResponseText()).contains('&lt;name>nise&lt;/name>&lt;value>0&lt;/value>')</verificationScript>
+assertThat(response.getResponseText()).contains('&lt;name>nise&lt;/name>&lt;value>0&lt;/value>')
+**/</verificationScript>
    <wsdlAddress>${Address_ARG2}</wsdlAddress>
 </WebServiceRequestEntity>

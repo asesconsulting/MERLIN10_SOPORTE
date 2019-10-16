@@ -61,6 +61,7 @@ RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 
+
 WS.verifyElementText(response, 'taxStatusNormalizeResponse.return.status', 'VA')
 WS.verifyElementText(response, 'taxStatusNormalizeResponse.return.statusReason', 'SM')
 WS.verifyElementText(response, 'taxStatusNormalizeResponse.return.nCuit.cuit', '30707171282')

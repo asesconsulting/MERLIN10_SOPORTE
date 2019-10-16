@@ -39,4 +39,39 @@
       <initValue>'http://api.preprod.merlindataquality.com/2.0/enrichment?wsdl'</initValue>
       <name>Enrichment_ARG2</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'http://api.preprod.merlindataquality.com/2.1/identityvalidation?wsdl'</initValue>
+      <name>Filiator_ARG_2_1</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'http://api.preprod.merlindataquality.com/2.0/reversegeocode?wsdl'</initValue>
+      <name>GeoReverse_ARG2</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'http://api.preprod.merlindataquality.com/2.0/predictiveaddresssearch?wsdl'</initValue>
+      <name>PredictiveSearch_ARG2</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'http://api.preprod.merlindataquality.com/2.0/namecomparatornormalizer?wsdl'</initValue>
+      <name>NameComparator_ARG2</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'http://api.preprod.merlindataquality.com/2.0/getpcfromlevel4?wsdl'</initValue>
+      <name>CP_Localidad_ARG2</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'http://api.preprod.merlindataquality.com/2.0/emailvalidation?wsdl'</initValue>
+      <name>Email_ARG2</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'http://api.preprod.merlindataquality.com/2.0/personSearch?wsdl'</initValue>
+      <name>PersonSearch_ARG2</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

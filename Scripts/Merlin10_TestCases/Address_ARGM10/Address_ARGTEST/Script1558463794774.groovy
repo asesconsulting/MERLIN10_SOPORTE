@@ -13,7 +13,7 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Address_ARG_SOAP_2/Address _CO_AV. COSTANERA - PALERMO'))
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Address_ARG_SOAP_2/Address _CO_AV_COSTANERA_PALERMO'))
 
 WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Address_ARG_SOAP_2/Address _CO_Localidad_General_LaMadrid'))
 

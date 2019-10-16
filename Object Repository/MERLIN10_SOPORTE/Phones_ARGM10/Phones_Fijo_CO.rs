@@ -84,8 +84,8 @@ WS.verifyElementText(response, 'phoneNormalize2Response.return.status', 'CO')
 WS.verifyElementText(response, 'phoneNormalize2Response.return.statusReason', 'SM')
 WS.verifyElementText(response, 'phoneNormalize2Response.return.nPhone.level1', 'AR')
 WS.verifyElementText(response, 'phoneNormalize2Response.return.nPhone.level2', 'BUENOS AIRES')
-WS.verifyElementText(response, 'phoneNormalize2Response.return.nPhone.level3', 'TRES DE FEBRERO')
-WS.verifyElementText(response, 'phoneNormalize2Response.return.nPhone.level4', '11 DE SEPTIEMBRE')
+WS.verifyElementText(response, 'phoneNormalize2Response.return.nPhone.level3', '')
+WS.verifyElementText(response, 'phoneNormalize2Response.return.nPhone.level4', '')
 WS.verifyElementText(response, 'phoneNormalize2Response.return.nPhone.level5', '')
 WS.verifyElementText(response, 'phoneNormalize2Response.return.nPhone.postalCode', '0')
 WS.verifyElementText(response, 'phoneNormalize2Response.return.nPhone.ddi', '')
@@ -94,15 +94,10 @@ WS.verifyElementText(response, 'phoneNormalize2Response.return.nPhone.characteri
 WS.verifyElementText(response, 'phoneNormalize2Response.return.nPhone.phoneNumber', '3521')
 WS.verifyElementText(response, 'phoneNormalize2Response.return.nPhone.validated', 'NO')
 WS.verifyElementText(response, 'phoneNormalize2Response.return.nPhone.additionalData', '')
-
-
-
-
-WS.verifyElementText(response, 'phoneNormalize2Response.return.nPhone.merlinCustomValues.merlinCustomValues[0].value', '01149233521')
-
-
-
-
-</verificationScript>
+assertThat(response.getResponseText()).contains('&lt;name>doNotCallRegistry&lt;/name>&lt;value>NO&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>fullCellphoneNumber&lt;/name>&lt;value>01149233521&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>fullPhone&lt;/name>&lt;value>01149233521&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>telefonoCompleto&lt;/name>&lt;value>01149233521&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>directory&lt;/name>&lt;value>SI&lt;/value>')</verificationScript>
    <wsdlAddress>${Phone_ARG2}</wsdlAddress>
 </WebServiceRequestEntity>

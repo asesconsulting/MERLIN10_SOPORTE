@@ -13,11 +13,35 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Filiation_ARGM10/Filiation_DU_SM'))
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Filiation_ARGM10/Filiation2.1_DudaMultiple_CambioRespuesta'))
 
-WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Filiation_ARGM10/Filiation_ER_SM'))
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Filiation_ARGM10/Filiation2.1_DudaMultiple_SANCOR'))
 
-WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Filiation_ARGM10/Filiation_NE_SM'))
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Filiation_ARGM10/Filiation_DU'))
+
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Filiation_ARGM10/Filiation_DU_Bertone_Maria'))
+
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Filiation_ARGM10/Filiation_DU_Mapfre_Despejada'))
+
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Filiation_ARGM10/Filiation_DU_Nombre'))
+
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Filiation_ARGM10/Filiation_NE'))
+
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Filiation_ARGM10/Filiation_OK_Maria_Ines'))
+
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Filiation_ARGM10/Filiation_VA_Forma_Juridica_Sancor'))
+
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Filiation_ARGM10/Filiation_VA_Hsbc_Tag_Score'))
+
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Filiation_ARGM10/Filiation_VA_Macro'))
 
 WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Filiation_ARGM10/Filiation_VA_OK'))
+
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Filiation_ARGM10/Filiation_VA_OK _DocumentType_Diference'))
+
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Filiation_ARGM10/Filiation_VA_OK _TributaryType_Diference'))
+
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Filiation_ARGM10/Filiation_VA_OK_Empresa'))
+
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Filiation_ARGM10/Filiation_VA_OK_Nombre'))
 

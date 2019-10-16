@@ -41,7 +41,7 @@
                &lt;!--Optional:-->
                &lt;characteristic> &lt;/characteristic>
                &lt;!--Optional:-->
-               &lt;phoneNumber>1149233521&lt;/phoneNumber>
+               &lt;phoneNumber>1161755152&lt;/phoneNumber>
                &lt;!--Optional:-->
                &lt;postalCode> &lt;/postalCode>
                &lt;!--Optional:-->
@@ -82,6 +82,24 @@ ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 
 
 
-</verificationScript>
+
+WS.verifyElementText(response, 'phoneNormalize2Response.return.status', 'CO')
+WS.verifyElementText(response, 'phoneNormalize2Response.return.statusReason', 'SM')
+WS.verifyElementText(response, 'phoneNormalize2Response.return.nPhone.level1', 'AR')
+WS.verifyElementText(response, 'phoneNormalize2Response.return.nPhone.level2', 'BUENOS AIRES')
+WS.verifyElementText(response, 'phoneNormalize2Response.return.nPhone.level3', '')
+WS.verifyElementText(response, 'phoneNormalize2Response.return.nPhone.level4', '')
+WS.verifyElementText(response, 'phoneNormalize2Response.return.nPhone.level5', '')
+WS.verifyElementText(response, 'phoneNormalize2Response.return.nPhone.postalCode', '0')
+WS.verifyElementText(response, 'phoneNormalize2Response.return.nPhone.ddi', '')
+WS.verifyElementText(response, 'phoneNormalize2Response.return.nPhone.ddn', '011')
+WS.verifyElementText(response, 'phoneNormalize2Response.return.nPhone.characteristic', '6175')
+WS.verifyElementText(response, 'phoneNormalize2Response.return.nPhone.phoneNumber', '5152')
+WS.verifyElementText(response, 'phoneNormalize2Response.return.nPhone.validated', 'NO')
+assertThat(response.getResponseText()).contains('&lt;name>directory&lt;/name>&lt;value>CE&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>telefonoCompleto&lt;/name>&lt;value>0111561755152&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>fullPhone&lt;/name>&lt;value>0111561755152&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>fullCellphoneNumber&lt;/name>&lt;value>1161755152&lt;/value>')
+assertThat(response.getResponseText()).contains('&lt;name>doNotCallRegistry&lt;/name>&lt;value>NO&lt;/value>')</verificationScript>
    <wsdlAddress>${Phone_ARG2}</wsdlAddress>
 </WebServiceRequestEntity>

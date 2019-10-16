@@ -13,9 +13,19 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Phones_ARGM10/Phones_Celular_CO'))
+
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Phones_ARGM10/Phones_Celular_CO_Nollame'))
+
 WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Phones_ARGM10/Phones_Fijo_CO'))
+
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Phones_ARGM10/Phones_Fijo_CO_NoLlame'))
+
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Phones_ARGM10/Phones_Macro_CO'))
 
 WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Phones_ARGM10/Phones_NE'))
 
 WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Phones_ARGM10/Phones_SD'))
+
+WS.sendRequestAndVerify(findTestObject('MERLIN10_SOPORTE/Phones_ARGM10/Phones_TN_CO'))
 
