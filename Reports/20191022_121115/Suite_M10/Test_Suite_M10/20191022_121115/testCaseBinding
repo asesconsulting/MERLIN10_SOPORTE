@@ -1,0 +1,17 @@
+{"testCaseName":"Test Cases/Merlin10_TestCases/Test_Cases_SOAP2/Address_ARGM10/Address_ARGTEST","testCaseId":"Test Cases/Merlin10_TestCases/Test_Cases_SOAP2/Address_ARGM10/Address_ARGTEST"}
+{"testCaseName":"Test Cases/Merlin10_TestCases/Test_Cases_SOAP2/CP_Localidad_ARGM10/CP_Localidad_ARGTEST","testCaseId":"Test Cases/Merlin10_TestCases/Test_Cases_SOAP2/CP_Localidad_ARGM10/CP_Localidad_ARGTEST"}
+{"testCaseName":"Test Cases/Merlin10_TestCases/Test_Cases_SOAP2/Email_ARGM10/Email_ARGTEST","testCaseId":"Test Cases/Merlin10_TestCases/Test_Cases_SOAP2/Email_ARGM10/Email_ARGTEST"}
+{"testCaseName":"Test Cases/Merlin10_TestCases/Test_Cases_SOAP2/Enrichement_ARGM10/Enrichement_ARGTEST","testCaseId":"Test Cases/Merlin10_TestCases/Test_Cases_SOAP2/Enrichement_ARGM10/Enrichement_ARGTEST"}
+{"testCaseName":"Test Cases/Merlin10_TestCases/Test_Cases_SOAP2/Filiation_ARGM10/Filiator_ARGTEST","testCaseId":"Test Cases/Merlin10_TestCases/Test_Cases_SOAP2/Filiation_ARGM10/Filiator_ARGTEST"}
+{"testCaseName":"Test Cases/Merlin10_TestCases/Test_Cases_SOAP2/GeoReverse_ARGM10/GeoReverse_ARGTEST","testCaseId":"Test Cases/Merlin10_TestCases/Test_Cases_SOAP2/GeoReverse_ARGM10/GeoReverse_ARGTEST"}
+{"testCaseName":"Test Cases/Merlin10_TestCases/Test_Cases_SOAP2/Name_ARGM10/Name_ARGTEST","testCaseId":"Test Cases/Merlin10_TestCases/Test_Cases_SOAP2/Name_ARGM10/Name_ARGTEST"}
+{"testCaseName":"Test Cases/Merlin10_TestCases/Test_Cases_SOAP2/NameComparator_ARGM10/NameComparator_ARGTEST","testCaseId":"Test Cases/Merlin10_TestCases/Test_Cases_SOAP2/NameComparator_ARGM10/NameComparator_ARGTEST"}
+{"testCaseName":"Test Cases/Merlin10_TestCases/Test_Cases_SOAP2/Patentes_ARGM10/Patentes_ARGTEST","testCaseId":"Test Cases/Merlin10_TestCases/Test_Cases_SOAP2/Patentes_ARGM10/Patentes_ARGTEST"}
+{"testCaseName":"Test Cases/Merlin10_TestCases/Test_Cases_SOAP2/PersonSearch_ARGM10/PersonSearch_ARGTEST","testCaseId":"Test Cases/Merlin10_TestCases/Test_Cases_SOAP2/PersonSearch_ARGM10/PersonSearch_ARGTEST"}
+{"testCaseName":"Test Cases/Merlin10_TestCases/Test_Cases_SOAP2/Phones_ARGM10/Phone_ARGTEST","testCaseId":"Test Cases/Merlin10_TestCases/Test_Cases_SOAP2/Phones_ARGM10/Phone_ARGTEST"}
+{"testCaseName":"Test Cases/Merlin10_TestCases/Test_Cases_SOAP2/PredictiveSearch_ARGM10/PredictiveSearch_ARGTEST","testCaseId":"Test Cases/Merlin10_TestCases/Test_Cases_SOAP2/PredictiveSearch_ARGM10/PredictiveSearch_ARGTEST"}
+{"testCaseName":"Test Cases/Merlin10_TestCases/Test_Cases_SOAP2/Tributary_ARGM10/Tributary_ARGTEST","testCaseId":"Test Cases/Merlin10_TestCases/Test_Cases_SOAP2/Tributary_ARGM10/Tributary_ARGTEST"}
+{"testCaseName":"Test Cases/Merlin10_TestCases/Test_Cases_REST1_5/Address_ARG_REST/Address_REST_TEST","testCaseId":"Test Cases/Merlin10_TestCases/Test_Cases_REST1_5/Address_ARG_REST/Address_REST_TEST"}
+{"testCaseName":"Test Cases/Merlin10_TestCases/Test_Cases_REST1_5/Filiation_ARG_REST/Filiation_REST_TEST","testCaseId":"Test Cases/Merlin10_TestCases/Test_Cases_REST1_5/Filiation_ARG_REST/Filiation_REST_TEST"}
+{"testCaseName":"Test Cases/Merlin10_TestCases/Test_Cases_REST1_5/Person_Search_ARG_REST/Person_Searh_REST_TEST","testCaseId":"Test Cases/Merlin10_TestCases/Test_Cases_REST1_5/Person_Search_ARG_REST/Person_Searh_REST_TEST"}
+{"testCaseName":"Test Cases/Merlin10_TestCases/Test_Cases_REST1_5/Phones_ARG_REST/Phones_REST_TEST","testCaseId":"Test Cases/Merlin10_TestCases/Test_Cases_REST1_5/Phones_ARG_REST/Phones_REST_TEST"}
